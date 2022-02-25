@@ -1,4 +1,3 @@
-<h4>Kunde:</h4>
 <table class="table table-striped table-bordered">
 
     <tr>
@@ -16,6 +15,10 @@
     <tr>
         <th>Dienstleistung</th>
         <td><?php echo $this->appointment->service->name  ?></td>
+    </tr>
+    <tr>
+        <th>Anbieter</th>
+        <td><?php echo $this->appointment->provider->firstName . ' ' . $this->appointment->provider->lastName ?></td>
     </tr>
     <tr>
         <th>Preis</th>

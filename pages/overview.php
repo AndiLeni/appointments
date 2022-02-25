@@ -18,13 +18,11 @@ $response = $api_appointments->get_appointments();
 
 
 
-if ($response->getStatusCode() != 200) {
+if ($response == null || $response->getStatusCode() != 200) {
     rex_view::error('API-Abfrage fehlgeschlagen. Bitte überprüfen Sie die Einstellungen.');
 } else {
 
     $appointments = json_decode($response->getBody()->getContents());
-
-    dump($appointments);
 
     $events = [];
 
@@ -82,7 +80,32 @@ if ($response->getStatusCode() != 200) {
                 var modal = document.getElementById('details_modal_body');
                 modal.innerHTML = info.event.extendedProps.description;
                 $('#details_modal').modal('toggle')
-            }
+            },
+            views: {
+                dayGridMonth: {
+                    buttonText: 'Monat'
+                },
+                timeGridWeek: {
+                    buttonText: 'Woche'
+                },
+                dayGridWeek: {
+                    buttonText: 'Tag'
+                },
+                listDay: {
+                    buttonText: 'Liste Tag'
+                },
+                listWeek: {
+                    buttonText: 'Liste Woche'
+                },
+                listMonth: {
+                    buttonText: 'Liste Monat'
+                },
+            },
+            headerToolbar: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'dayGridMonth,timeGridWeek,dayGridWeek,listDay,listWeek,listMonth'
+            },
         });
         calendar.render();
 

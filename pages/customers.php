@@ -6,7 +6,7 @@ $response = $api_customers->get_customers();
 
 
 
-if ($response->getStatusCode() != 200) {
+if ($response == null || $response->getStatusCode() != 200) {
     rex_view::error('API-Abfrage fehlgeschlagen. Bitte überprüfen Sie die Einstellungen.');
 } else {
 

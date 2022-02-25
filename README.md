@@ -1,10 +1,18 @@
+# Appointments Addon für REDAXO CMS
 
 
+Dieses Addon bindet Redaxo an das Buchungssystem [Easy!Appointments](https://easyappointments.org/) an.
 
-# Developer:
 
-## Code generation:
+## Aktuelle Features
+- Anzeige der Buchungen 
+- Anzeige der Kunden
 
-1. https://github.com/alextselegidis/easyappointments/blob/develop/openapi.yml
-2. https://editor.swagger.io/
-3. "Generate Client" -> "php"
+
+## Bilder
+
+
+![Image_1](images/1.png)
+![Image_2](images/2.png)
+![Image_3](images/3.png)
+![Image_4](images/4.png)
