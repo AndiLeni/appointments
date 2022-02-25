@@ -70,13 +70,13 @@ if ($response->getStatusCode() != 200) {
             locale: 'de',
             initialView: 'dayGridMonth',
             events: <?php echo json_encode($events); ?>,
-            eventDidMount: function(info) {
-                var tooltip = tippy(info.el, {
-                    content: info.event.extendedProps.description,
-                    trigger: 'click',
-                    allowHTML: true,
-                });
-            },
+            // eventDidMount: function(info) {
+            //     var tooltip = tippy(info.el, {
+            //         content: info.event.extendedProps.description,
+            //         trigger: 'click',
+            //         allowHTML: true,
+            //     });
+            // },
             eventClick: function(info) {
                 console.log(info.event.extendedProps.description);
                 var modal = document.getElementById('details_modal_body');
