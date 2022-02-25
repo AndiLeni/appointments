@@ -1,0 +1,26 @@
+package: appointments
+version: "0.1.0-alpha.1"
+author: Andreas Lenhardt
+page:
+    title: "Appointments"
+    perm: appointments[]
+    icon: rex-icon fa-calendar-o
+    subpages:
+        overview:
+            title: "Übersicht"
+        appointments:
+            title: "Buchungen"
+        customers:
+            title: "Kunden"
+        settings:
+            title: "Einstellungen"
+            icon: rex-icon fa-cog
+        help:
+            title: "Hilfe"
+            icon: rex-icon fa-help
+            subPath: README.md
+
+requires:
+    redaxo: "^5.12"
+    php:
+        version: "^7.4"
